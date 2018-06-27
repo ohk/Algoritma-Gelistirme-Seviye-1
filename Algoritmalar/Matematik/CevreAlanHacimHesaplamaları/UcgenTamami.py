@@ -25,14 +25,8 @@ def FonkUcgenAlan2KenarveDerece():
 def FonkUcgenAlan2kenarvedikAci():
     kenar1 = float (input("İlk kenarın uzunluğunu giriniz: "))
     kenar2 = float (input("İkinci kenarın uzunluğunu giriniz: "))
-    alan = (kenar1*kenar1+kenar2*kenar2)/2
+    alan = (kenar1*kenar2)/2
     return print("1. kenar uzunluğu {} , 2. kenar uzunluğu {} ve bu kenarlar arasındaki açı {} derece olan üçgenin alanı = {}".format(kenar1,kenar2,90,alan))
-
-def FonkUcgenAlanKenarveYukseklik():
-    kenaruzunlugu = float (input("Kenar uzunluğunu giriniz: "))
-    yukseklik = float (input("Yüksekliği giriniz: "))
-    alan = kenaruzunlugu * yukseklik/2
-    return print("Kenar uzunluğu {} ve yüksekliği {} olan üçgenin alanı = {} cm2".format(kenaruzunlugu,yukseklik,alan))
 
 def FonkUcgenAlanTumKenarlariBilinen():
     kenar1 = float (input("İlk kenarın uzunluğunu giriniz: "))
@@ -57,7 +51,7 @@ def checkchoosed():
 def main(choosed2):
     if choosed2 == True:
         print("\nÜçgenlerle ilgili yapmak istediğinizi seçiniz:")
-        choosed = int(input("1. Üçgenin çevresini bulmak\n2. 2 kenarı ve açısı bilenen üçgenin 3. kenarını Bulmak\n3. 2 kenarı ve aralarındaki açı bilinen üçgenin alanını bulmak\n4. Dik üçgenin alanını bulmak\n5. Bir kenarı ve yüksekliği bilinen üçgenin alanını bulmak\n6. Tüm kenarları bilinen üçgenin alanını bulmak\nSeçiminiz: "))
+        choosed = int(input("1. Üçgenin çevresini bulmak\n2. 2 kenarı ve açısı bilenen üçgenin 3. kenarını Bulmak\n3. 2 kenarı ve aralarındaki açı bilinen üçgenin alanını bulmak\n4. Dik üçgenin alanını bulmak\n5. Tüm kenarları bilinen üçgenin alanını bulmak\nSeçiminiz: "))
 
         if choosed == 1:
             FonkUcgenCevre()
@@ -68,8 +62,6 @@ def main(choosed2):
         elif choosed == 4:
             FonkUcgenAlan2kenarvedikAci()
         elif choosed == 5:
-            FonkUcgenAlanKenarveYukseklik()
-        elif choosed == 6:
             FonkUcgenAlanTumKenarlariBilinen()
         else:
             print("\nSeçiminiz belirlenen aralıkta değil! Lütfen yeniden seçim yapınız")
